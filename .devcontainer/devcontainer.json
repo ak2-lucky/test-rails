@@ -4,10 +4,6 @@
 		"../docker-compose.yml",
 		"docker-compose.yml"
 	],
-	"runServices": [
-		"web",
-		"db"
-	],
 	"service": "web", //docker-compse.ymlで記載されている起動対象のサービス名、Railsのサービスを指定します
 	"workspaceFolder": "/app",//起動時に接続するディレクトリ
   "customizations": {
@@ -22,5 +18,5 @@
         }
       }
     }
-  },
+  }
 }
