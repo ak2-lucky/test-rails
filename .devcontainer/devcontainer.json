@@ -10,5 +10,5 @@
 	],
 	"service": "web", //docker-compse.ymlで記載されている起動対象のサービス名、Railsのサービスを指定します
 	"workspaceFolder": "/app", //起動時に接続するディレクトリ
-	"postCreateCommand": "rails s -p 3000 -b '0.0.0.0'"
+	"postAttachCommand": "rails s -p 3000 -b '0.0.0.0'"
 }
