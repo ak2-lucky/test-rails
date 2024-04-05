@@ -1,5 +1,5 @@
 {
-	"name": "Existing Docker Compose",
+	"name": "rails-test",
 	"dockerComposeFile": [ //2つ目のdocker-compose.ymlで1つ目の設定を上書きます
 		"../docker-compose.yml",
 		"docker-compose.yml"
@@ -9,6 +9,18 @@
 		"db"
 	],
 	"service": "web", //docker-compse.ymlで記載されている起動対象のサービス名、Railsのサービスを指定します
-	"workspaceFolder": "/app", //起動時に接続するディレクトリ
-	"postAttachCommand": "rails s -p 3000 -b '0.0.0.0'"
+	"workspaceFolder": "/app",//起動時に接続するディレクトリ
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp"
+      ],
+      "settings": {
+        "rubyLsp.rubyVersionManager": "none",
+        "[ruby]": {
+          "editor.defaultFormatter": "Shopify.ruby-lsp"
+        }
+      }
+    }
+  },
 }
